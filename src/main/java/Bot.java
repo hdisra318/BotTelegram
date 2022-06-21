@@ -1,3 +1,10 @@
+import org.telegram.telegrambots.bots.TelegramLongPollingBot;
+import org.telegram.telegrambots.meta.TelegramBotsApi;
+import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
+import org.telegram.telegrambots.meta.api.objects.Update;
+import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
+import org.telegram.telegrambots.updatesreceivers.DefaultBotSession;
+
 import java.util.HashMap;
 import java.util.Scanner;
 
@@ -10,13 +17,17 @@ import java.util.Scanner;
  * @version 1.0 May 2022
  * @since Modeling and Programming 2022-2
  */
-public class Bot {
+public class Bot extends TelegramLongPollingBot {
 
     /** Usuario actual */
     private UsuarioProxy user;
 
     /** Controlador para la base de datos */
     private static ControladorBDD controlador = new ControladorBDD();
+
+    /** Estatus de la sesion
+     * true - sesion iniciada */
+    private boolean status = false;
 
     /**
      * Registra al usuario
@@ -150,10 +161,117 @@ public class Bot {
 
     }
 
+    @Override
+    public String getBotUsername() {
+        return "PruebaPsicoBot";
+    }
+
+    @Override
+    public String getBotToken() {
+        return "5370714415:AAGb4KVnCrcH4j0IdAM_nL0cAKT6EOrzBnQ";
+    }
+
+    @Override
+    public void onUpdateReceived(Update update) {
+        /*
+        System.out.println(update.getMessage().getFrom().getFirstName() + ": " + update.getMessage().getText());
+
+        //Send a message
+        SendMessage sendMessage = new SendMessage().setChatId(update.getMessage().getChatId());
+        sendMessage.setText("Hola "+ update.getMessage().getFrom().getFirstName() +"\n"+update.getMessage().getText());
+
+        try{
+            this.sendMessage(sendMessage);
+        }catch(TelegramApiException tae){
+
+            tae.printStackTrace();
+        }*/
+
+        //Escribe texto
+        /*SendMessage message = new SendMessage();
+        message.setChatId(update.getMessage().getChatId().toString());
+        message.setText("\n>>>>>>>>>>>>> HOLA, BIENVENIDO A QUIZME! <<<<<<<<<<<<<\n"+
+                ">>>>>>>>>>> SOY BUZZ, EL BOT QUE TE EVALUA ;^) <<<<<<<<<<<");
+        try{
+            this.execute(message);
+        }catch(TelegramApiException e){
+            System.out.println("Error al enviar un mensaje");
+        }*/
+
+        //Leer texto
+        //System.out.println(update.getMessage().getFrom().getFirstName()+" puso: "+update.getMessage().getText());
+
+        String comand = update.getMessage().getText().toString();
+
+        if(comand.equals("/start")&& this.status == false){
+
+            SendMessage bienvenida = new SendMessage();
+            SendMessage registro = new SendMessage();
+            bienvenida.setChatId(update.getMessage().getChatId().toString());
+            registro.setChatId(update.getMessage().getChatId().toString());
+            bienvenida.setText(">>>>>>>>>>>>> HOLA, BIENVENIDO A QUIZME! <<<<<<<<<<<<<\n"+
+                    ">>>>>>>>>>> SOY BUZZ, EL BOT QUE TE EVALUA ;^) <<<<<<<<<<<\n"+
+                    "---- Espero mis servicios te sirvan :D ----");
+            registro.setText("¿Ya estas registrado?");
+
+            try{
+                this.execute(bienvenida);
+                this.execute(registro);
+            }catch(TelegramApiException e){
+                System.out.println("Error al enviar un mensaje");
+            }
+
+            this.status = true;
+        }
+
+        if(comand.equalsIgnoreCase("si")){
+            SendMessage r = new SendMessage();
+            r.setChatId(update.getMessage().getChatId().toString());
+            String resp = update.getMessage().getText().toString();
+            resp = resp.toLowerCase();
+            switch (resp){
+                case "si":
+                    r.setText("Genial, iniciemos....");
+                    break;
+
+                case "no":
+                    r.setText("Vamos a registrarte....");
+                    break;
+            }
+
+            try{
+                this.execute(r);
+            }catch(TelegramApiException e){
+                System.out.println("Error al enviar un mensaje");
+            }
+        }
+
+
+    }
+
     public static void main(String[] args) {
-        
+
+        /* HACER UNA CLASE BotTelegram en el que tenga metodos de leer texto y escribir texto a Telegram y que
+        * regresen un String y de parametro un String */
+
         /* Iniciando ejecucion */
         Bot bot = new Bot();
+        try {
+
+            TelegramBotsApi botsApi = new TelegramBotsApi(DefaultBotSession.class);
+            botsApi.registerBot(bot);
+
+        }catch(TelegramApiException tae){
+
+            tae.printStackTrace();
+        }
+
+
+
+
+
+        /*
+
         Modo modo;
         Scanner sc = new Scanner(System.in);
         boolean salir = false;
@@ -253,9 +371,9 @@ public class Bot {
         }while(!salir);
 
         controlador.respaldarBDD();
+    */
+
     }
-
-
 
 
 
