@@ -1,0 +1,150 @@
+{
+  "hemingway56": {
+    "nombre": "ernest",
+    "usuario": "hemingway56",
+    "contrasena": "Viejo85",
+    "telefono": "5559752048",
+    "correo": "marazul@hotmail.com",
+    "carrera": "cienciasdelacomputacion",
+    "modoActual": "psicologico",
+    "respuestasEncuesta": [],
+    "problemas": [
+      "Soledad",
+      "Problemas familiares",
+      "Problemas interpersonales",
+      "Ansiedad leve",
+      "Ansiedad grave",
+      "Problemas economicos",
+      "Depresion"
+    ],
+    "encuestaTerminada": true,
+    "consentimientoDeConexion": true
+  },
+  "tenoch24": {
+    "nombre": "tenoch",
+    "usuario": "tenoch24",
+    "contrasena": "asdf",
+    "telefono": "12343456",
+    "correo": "tenoch24@gmail.com",
+    "carrera": "ciencias",
+    "modoActual": "psicologico",
+    "respuestasEncuesta": [],
+    "problemas": [
+      "Soledad",
+      "Estres escolar",
+      "Problemas interpersonales",
+      "Ansiedad leve",
+      "Ansiedad moderada",
+      "Problemas economicos"
+    ],
+    "encuestaTerminada": true,
+    "consentimientoDeConexion": false
+  },
+  "angel18": {
+    "nombre": "angel",
+    "usuario": "angel18",
+    "contrasena": "contra123",
+    "telefono": "557894204",
+    "correo": "angel@outlook.com",
+    "carrera": "fisica",
+    "modoActual": "psicologico",
+    "respuestasEncuesta": [],
+    "problemas": [
+      "Ansiedad leve",
+      "Ansiedad grave",
+      "Problemas economicos"
+    ],
+    "encuestaTerminada": true,
+    "consentimientoDeConexion": true
+  },
+  "shifter25": {
+    "nombre": "erenrodriguez",
+    "usuario": "shifter25",
+    "contrasena": "contrasena",
+    "telefono": "5324576556",
+    "correo": "titan_25@gmail.com",
+    "carrera": "matematicasaplicadas",
+    "modoActual": "psicologico",
+    "respuestasEncuesta": [],
+    "problemas": [
+      "Soledad",
+      "Ansiedad grave",
+      "Depresion"
+    ],
+    "encuestaTerminada": true,
+    "consentimientoDeConexion": true
+  },
+  "cat_black@yahoo.com": {
+    "nombre": "adrianaguilar",
+    "usuario": "catblack23",
+    "contrasena": "Milagro44",
+    "telefono": "65436754687",
+    "correo": "catblack_23@yahoo.com",
+    "carrera": "matematicasaplicadas",
+    "modoActual": "psicologico",
+    "respuestasEncuesta": [],
+    "problemas": [
+      "Soledad",
+      "Estres escolar",
+      "Problemas familiares",
+      "Problemas interpersonales",
+      "Ansiedad leve",
+      "Ansiedad moderada",
+      "Ansiedad grave",
+      "Problemas economicos",
+      "Depresion"
+    ],
+    "encuestaTerminada": true,
+    "consentimientoDeConexion": true
+  },
+  "librecito25": {
+    "nombre": "miguelhidalgo",
+    "usuario": "librecito25",
+    "contrasena": "contrasena",
+    "telefono": "23457654",
+    "correo": "alondiga@hotmail.com",
+    "carrera": "ciencias",
+    "modoActual": "psicologico",
+    "respuestasEncuesta": [],
+    "problemas": [],
+    "encuestaTerminada": true,
+    "consentimientoDeConexion": false
+  },
+  "mary28": {
+    "nombre": "mary",
+    "usuario": "mary28",
+    "contrasena": "hola123",
+    "telefono": "554972054",
+    "correo": "mary@yahoo.com.mx",
+    "carrera": "actuaria",
+    "modoActual": "psicologico",
+    "respuestasEncuesta": [],
+    "problemas": [
+      "Soledad",
+      "Problemas familiares",
+      "Ansiedad grave",
+      "Problemas economicos"
+    ],
+    "encuestaTerminada": true,
+    "consentimientoDeConexion": true
+  },
+  "hdisra": {
+    "nombre": "israel",
+    "usuario": "hdisra",
+    "contrasena": "contrasena123",
+    "telefono": "5548225911",
+    "correo": "hdisra318@ciencias.unam.mx",
+    "carrera": "ciencias",
+    "modoActual": "psicologico",
+    "respuestasEncuesta": [],
+    "problemas": [
+      "Soledad",
+      "Problemas familiares",
+      "Ansiedad moderada",
+      "Ansiedad grave",
+      "Depresion"
+    ],
+    "encuestaTerminada": true,
+    "consentimientoDeConexion": true
+  }
+}
